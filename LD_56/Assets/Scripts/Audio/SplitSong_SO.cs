@@ -6,8 +6,8 @@ using UnityEngine;
 public class SplitSong_SO : ScriptableObject
 {
     [Tooltip("This audio clip will only be played once")]
-    public AudioClip intro;
+    public AudioClip Intro;
 
     [Tooltip("This audio clip will loop")]
-    public AudioClip loopable;
+    public AudioClip Loopable;
 }

@@ -5,23 +5,45 @@ using UnityEngine;
 [RequireComponent(typeof(AudioSource))]
 public class SoundtrackManager : MonoBehaviour
 {
-    public SplitSong_SO CurrentSong;
+    static public SoundtrackManager Instance {get; private set;}
+
+    [SerializeField]
+    private SplitSong_SO CurrentSong;
 
     AudioSource audioSource;
     private void Awake() {
+        if (Instance != null && Instance != this) 
+        { 
+            Destroy(this); 
+        } 
+        else 
+        { 
+            Instance = this; 
+        } 
+
         audioSource = GetComponent<AudioSource>();
         PlaySplitSong();
     }
 
+    public void SetCurrentSong(SplitSong_SO splitSong) {
+        // Can make the transition between songs smoother here
+        audioSource.Stop();
+
+        CurrentSong = splitSong;
+    }
+
     public void PlaySplitSong() {
         audioSource.Stop();
-        audioSource.PlayOneShot(CurrentSong.intro);
+        if (CurrentSong.Intro != null) {
+            audioSource.PlayOneShot(CurrentSong.Intro);
+        }
         StartCoroutine(PlayLoopable());
     }
 
     private IEnumerator PlayLoopable() {
-        yield return new WaitForSeconds(CurrentSong.intro.length);
-        audioSource.clip = CurrentSong.loopable;
+        float delay = (CurrentSong.Intro != null ? CurrentSong.Intro.length : 0f);
+        yield return new WaitForSeconds(delay);
+        audioSource.clip = CurrentSong.Loopable;
         audioSource.loop = true;
         audioSource.Play();
     }
