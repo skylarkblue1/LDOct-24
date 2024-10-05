@@ -25,10 +25,12 @@ public class InputManager : MonoBehaviour
 
     private void OnEnable() {
         playerControls.Movement.Enable();
+        playerControls.Interact.Enable();
     }
 
     private void OnDisable() {
         playerControls.Movement.Disable();
+        playerControls.Interact.Disable();
     }
 
     public Vector2 GetPlayerMovement() {
@@ -37,5 +39,9 @@ public class InputManager : MonoBehaviour
 
     public Vector2 GetMouseDelta() {
         return playerControls.Movement.Look.ReadValue<Vector2>();
+    }
+
+    public bool AttackKeyPressed() {
+        return playerControls.Interact.Attack.IsPressed();
     }
 }
