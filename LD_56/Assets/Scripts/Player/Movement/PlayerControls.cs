@@ -28,37 +28,19 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             ""id"": ""256bed9b-8701-4237-8529-ab301e361907"",
             ""actions"": [
                 {
-                    ""name"": ""Forward"",
-                    ""type"": ""Button"",
-                    ""id"": ""c935c533-d64a-4362-8b80-faf7ef74333b"",
-                    ""expectedControlType"": ""Button"",
+                    ""name"": ""Look"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""85369d7f-e0b0-41a1-b381-9423f0bf8b3f"",
+                    ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Backward"",
-                    ""type"": ""Button"",
-                    ""id"": ""94abf964-cf57-4f30-bf1d-615bcdb2e9d3"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Strafe Left"",
-                    ""type"": ""Button"",
-                    ""id"": ""9c07b4cb-1b58-4852-baa8-af3b604d02bd"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Strafe Right"",
-                    ""type"": ""Button"",
-                    ""id"": ""72ae99a6-07a3-466b-9e40-01acce0341e5"",
-                    ""expectedControlType"": ""Button"",
+                    ""name"": ""Move"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""7b5f005f-fd32-4b75-9778-db3054c9fd6f"",
+                    ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
@@ -67,47 +49,69 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""c7ae602f-7261-41a5-91c0-5970aa70d9f8"",
+                    ""id"": ""56e80d5d-3378-4f95-8b90-4ac6d04cd0a7"",
+                    ""path"": ""<Mouse>/delta"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Look"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""WASD"",
+                    ""id"": ""7d028a5a-7336-464b-9100-2ff442d5e4b8"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""133cafda-38cb-447f-91bb-08449ded4e84"",
                     ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Forward"",
+                    ""action"": ""Move"",
                     ""isComposite"": false,
-                    ""isPartOfComposite"": false
+                    ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": """",
-                    ""id"": ""417c3f44-25fd-4b71-a7be-0918ba79648b"",
+                    ""name"": ""down"",
+                    ""id"": ""0eaca124-55ce-4e2f-a156-bbafdcc4e674"",
                     ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Backward"",
+                    ""action"": ""Move"",
                     ""isComposite"": false,
-                    ""isPartOfComposite"": false
+                    ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": """",
-                    ""id"": ""9ea6637c-ab64-4ffb-9aaf-46c988fff4c2"",
+                    ""name"": ""left"",
+                    ""id"": ""165bcb71-85f6-4c84-8625-cb203757c4c4"",
                     ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Strafe Left"",
+                    ""action"": ""Move"",
                     ""isComposite"": false,
-                    ""isPartOfComposite"": false
+                    ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": """",
-                    ""id"": ""80d0a162-59b4-49cb-8955-3d24634cae4a"",
+                    ""name"": ""right"",
+                    ""id"": ""780a23c3-1a1f-4f06-8d7b-c0b572d8dc7a"",
                     ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Strafe Right"",
+                    ""action"": ""Move"",
                     ""isComposite"": false,
-                    ""isPartOfComposite"": false
+                    ""isPartOfComposite"": true
                 }
             ]
         }
@@ -116,10 +120,8 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
 }");
         // Movement
         m_Movement = asset.FindActionMap("Movement", throwIfNotFound: true);
-        m_Movement_Forward = m_Movement.FindAction("Forward", throwIfNotFound: true);
-        m_Movement_Backward = m_Movement.FindAction("Backward", throwIfNotFound: true);
-        m_Movement_StrafeLeft = m_Movement.FindAction("Strafe Left", throwIfNotFound: true);
-        m_Movement_StrafeRight = m_Movement.FindAction("Strafe Right", throwIfNotFound: true);
+        m_Movement_Look = m_Movement.FindAction("Look", throwIfNotFound: true);
+        m_Movement_Move = m_Movement.FindAction("Move", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -181,18 +183,14 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     // Movement
     private readonly InputActionMap m_Movement;
     private List<IMovementActions> m_MovementActionsCallbackInterfaces = new List<IMovementActions>();
-    private readonly InputAction m_Movement_Forward;
-    private readonly InputAction m_Movement_Backward;
-    private readonly InputAction m_Movement_StrafeLeft;
-    private readonly InputAction m_Movement_StrafeRight;
+    private readonly InputAction m_Movement_Look;
+    private readonly InputAction m_Movement_Move;
     public struct MovementActions
     {
         private @PlayerControls m_Wrapper;
         public MovementActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Forward => m_Wrapper.m_Movement_Forward;
-        public InputAction @Backward => m_Wrapper.m_Movement_Backward;
-        public InputAction @StrafeLeft => m_Wrapper.m_Movement_StrafeLeft;
-        public InputAction @StrafeRight => m_Wrapper.m_Movement_StrafeRight;
+        public InputAction @Look => m_Wrapper.m_Movement_Look;
+        public InputAction @Move => m_Wrapper.m_Movement_Move;
         public InputActionMap Get() { return m_Wrapper.m_Movement; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -202,34 +200,22 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         {
             if (instance == null || m_Wrapper.m_MovementActionsCallbackInterfaces.Contains(instance)) return;
             m_Wrapper.m_MovementActionsCallbackInterfaces.Add(instance);
-            @Forward.started += instance.OnForward;
-            @Forward.performed += instance.OnForward;
-            @Forward.canceled += instance.OnForward;
-            @Backward.started += instance.OnBackward;
-            @Backward.performed += instance.OnBackward;
-            @Backward.canceled += instance.OnBackward;
-            @StrafeLeft.started += instance.OnStrafeLeft;
-            @StrafeLeft.performed += instance.OnStrafeLeft;
-            @StrafeLeft.canceled += instance.OnStrafeLeft;
-            @StrafeRight.started += instance.OnStrafeRight;
-            @StrafeRight.performed += instance.OnStrafeRight;
-            @StrafeRight.canceled += instance.OnStrafeRight;
+            @Look.started += instance.OnLook;
+            @Look.performed += instance.OnLook;
+            @Look.canceled += instance.OnLook;
+            @Move.started += instance.OnMove;
+            @Move.performed += instance.OnMove;
+            @Move.canceled += instance.OnMove;
         }
 
         private void UnregisterCallbacks(IMovementActions instance)
         {
-            @Forward.started -= instance.OnForward;
-            @Forward.performed -= instance.OnForward;
-            @Forward.canceled -= instance.OnForward;
-            @Backward.started -= instance.OnBackward;
-            @Backward.performed -= instance.OnBackward;
-            @Backward.canceled -= instance.OnBackward;
-            @StrafeLeft.started -= instance.OnStrafeLeft;
-            @StrafeLeft.performed -= instance.OnStrafeLeft;
-            @StrafeLeft.canceled -= instance.OnStrafeLeft;
-            @StrafeRight.started -= instance.OnStrafeRight;
-            @StrafeRight.performed -= instance.OnStrafeRight;
-            @StrafeRight.canceled -= instance.OnStrafeRight;
+            @Look.started -= instance.OnLook;
+            @Look.performed -= instance.OnLook;
+            @Look.canceled -= instance.OnLook;
+            @Move.started -= instance.OnMove;
+            @Move.performed -= instance.OnMove;
+            @Move.canceled -= instance.OnMove;
         }
 
         public void RemoveCallbacks(IMovementActions instance)
@@ -249,9 +235,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     public MovementActions @Movement => new MovementActions(this);
     public interface IMovementActions
     {
-        void OnForward(InputAction.CallbackContext context);
-        void OnBackward(InputAction.CallbackContext context);
-        void OnStrafeLeft(InputAction.CallbackContext context);
-        void OnStrafeRight(InputAction.CallbackContext context);
+        void OnLook(InputAction.CallbackContext context);
+        void OnMove(InputAction.CallbackContext context);
     }
 }
