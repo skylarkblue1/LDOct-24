@@ -40,7 +40,7 @@ public class FirstPersonMovement : MonoBehaviour
         move.y = 0f;
         controller.Move(moveSpeed * Time.deltaTime * move);
         if (move != Vector3.zero) {
-            gameObject.transform.forward = movement;
+            gameObject.transform.forward = move;
         }
     }
 }
