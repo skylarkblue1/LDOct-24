@@ -25,7 +25,7 @@ public class EnemyType1 : Enemy
     }
     protected override void Movement()
     {
-        Debug.Log("Moving");
+        transform.forward = player.position - transform.position;
     }
     void PerformAttack()
     {
