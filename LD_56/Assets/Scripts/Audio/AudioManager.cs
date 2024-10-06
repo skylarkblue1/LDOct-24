@@ -25,7 +25,9 @@ public class AudioManager : MonoBehaviour
     private void Awake() {
         allSfxSources = GameObject.FindObjectsOfType<AudioSource>().ToList<AudioSource>();
         allSfxSources.Remove(jukebox);
+    }
 
+    private void Start() {
         jukebox.volume = audioSettings.MusicVolume;
         
         if (musicSlider) {
