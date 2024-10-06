@@ -15,7 +15,7 @@ public class SceneController : MonoBehaviour
         else 
         { 
             Instance = this; 
-        } 
+        }
     }
     
     public void LoadScene(int buildIndex)
