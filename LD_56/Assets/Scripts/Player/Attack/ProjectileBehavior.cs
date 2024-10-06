@@ -42,6 +42,10 @@ public class ProjectileBehavior : MonoBehaviour
     private void OnCollisionEnter(Collision other) {
         if (other.gameObject.CompareTag("Enemy")) {
             // Damage Enemy
+            if (other.gameObject.TryGetComponent(out DamageEnemy damageEnemy))
+            {
+                damageEnemy.Damage(damageValue);
+            }
         }
         gameObject.SetActive(false);
     }

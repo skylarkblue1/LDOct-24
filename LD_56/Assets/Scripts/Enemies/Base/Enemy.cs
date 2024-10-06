@@ -9,6 +9,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] float detectionRange;
     [SerializeField] protected float attackDelay;
     [SerializeField] protected float attackDamage;
+    [SerializeField] protected float health;
 
     Rigidbody rb;
     NavMeshAgent agent;
