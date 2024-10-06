@@ -12,30 +12,30 @@ public class StoryTriggerZone : MonoBehaviour
     [SerializeField]
     [Tooltip("How long the text stays up before it disappears")]
     private float lifespan;
-    [SerializeField]
+
     [Tooltip("Can this text pop up again?")]
-    private bool reactivateable;
+    public bool Reactivateable;
 
     private bool isActivated = false;
 
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+   private void OnEnable() {
+        isActivated = false;
+   }
 
     private void OnTriggerEnter(Collider other) {
         if (other.gameObject.CompareTag("Player") && !isActivated) {
             isActivated = true;
             narrativeBox.DisplayText(narrativeText);
             StartCoroutine(ProcessLifespan());
+            SendMessageUpwards("ToggleZones", this, SendMessageOptions.DontRequireReceiver);
         }
     }
 
     private IEnumerator ProcessLifespan() {
         yield return new WaitForSeconds(lifespan);
         narrativeBox.TryDisableTextBox(narrativeText);
-        if (reactivateable) {
+        if (Reactivateable) {
             isActivated = false;
         } else  {
             gameObject.SetActive(false);

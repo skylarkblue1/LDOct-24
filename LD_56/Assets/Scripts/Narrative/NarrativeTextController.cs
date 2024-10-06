@@ -5,23 +5,26 @@ using UnityEngine;
 
 public class NarrativeTextController : MonoBehaviour
 {
-    private TextMeshProUGUI textBox;
+    private GameObject textBox;
+    private TextMeshProUGUI tmp;
 
     private void Awake() {
-        textBox = GetComponent<TextMeshProUGUI>();
-        textBox.text = "";
-        textBox.enabled = false;
+        textBox = transform.parent.gameObject;
+        textBox.SetActive(false);
+
+        tmp = GetComponent<TextMeshProUGUI>();
+        tmp.text = "";
     }
 
     public void DisplayText(string text) {
-        textBox.text = text;
-        textBox.enabled = true;  
+        tmp.text = text;
+        textBox.SetActive(true);
     }
 
     // The StoryTriggerZone will try and disable the textBox, if the text box still has the same text up on the trigger zone
     public void TryDisableTextBox(string triggerZoneText) {
-        if (triggerZoneText == textBox.text) {
-            textBox.enabled = false;
+        if (triggerZoneText == tmp.text) {
+            textBox.SetActive(false);
         }
     }
 }
