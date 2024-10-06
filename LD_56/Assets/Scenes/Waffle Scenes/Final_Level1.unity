@@ -18336,7 +18336,11 @@ PrefabInstance:
     - target: {fileID: 3756296101132095689, guid: 21d8cf006c3300f4d83ecf4da4c70f5e, type: 3}
       propertyPath: ammoPool
       value: 
-      objectReference: {fileID: 1190217157}
+      objectReference: {fileID: 1190217159}
+    - target: {fileID: 3756296101132095689, guid: 21d8cf006c3300f4d83ecf4da4c70f5e, type: 3}
+      propertyPath: cooldown
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 4658251274142040479, guid: 21d8cf006c3300f4d83ecf4da4c70f5e, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
@@ -34389,7 +34393,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1190217158}
+  - component: {fileID: 1190217159}
   - component: {fileID: 1190217157}
+  - component: {fileID: 1190217160}
   m_Layer: 0
   m_Name: Projectile Object Pool
   m_TagString: Untagged
@@ -34410,7 +34416,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToCopy: {fileID: 5659728724122833927, guid: 26be8a497764baf4ea83ed825d06b72c, type: 3}
-  maxObjectCount: 100
+  maxObjectCount: 50
   objectPool: []
 --- !u!4 &1190217158
 Transform:
@@ -34427,6 +34433,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1190217159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1190217156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07c093d53805d824ba032687f4bf133b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1190217160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1190217156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 701dea59d88c0d847a429b2def279740, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToCopy: {fileID: 5659728724122833927, guid: 480aaca3525c07c4ab08c4f82a891cd2, type: 3}
+  maxObjectCount: 50
+  objectPool: []
 --- !u!1 &1229699429
 GameObject:
   m_ObjectHideFlags: 0
