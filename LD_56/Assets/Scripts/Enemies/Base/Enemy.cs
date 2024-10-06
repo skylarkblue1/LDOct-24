@@ -13,7 +13,7 @@ public class Enemy : MonoBehaviour
     Rigidbody rb;
     NavMeshAgent agent;
     Animator animator;
-    Transform player;
+    protected Transform player;
 
 
     private void Start()
