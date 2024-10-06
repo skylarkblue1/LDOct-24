@@ -722,7 +722,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0
   detectionRange: 5
-  attackDelay: 0
+  attackDelay: 2
   attackDamage: 0
 --- !u!195 &532656751
 NavMeshAgent:

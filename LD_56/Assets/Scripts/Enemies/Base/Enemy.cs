@@ -5,10 +5,10 @@ using UnityEngine.AI;
 public class Enemy : MonoBehaviour
 {
     [Header("Parameters")]
-    [SerializeField] float speed;
+    [SerializeField] protected float speed;
     [SerializeField] float detectionRange;
-    [SerializeField] float attackDelay;
-    [SerializeField] float attackDamage;
+    [SerializeField] protected float attackDelay;
+    [SerializeField] protected float attackDamage;
 
     Rigidbody rb;
     NavMeshAgent agent;
