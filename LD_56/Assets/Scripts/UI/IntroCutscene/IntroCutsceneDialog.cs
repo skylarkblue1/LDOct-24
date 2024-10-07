@@ -53,31 +53,31 @@ public class IntroCutsceneDialog : MonoBehaviour
     {
         "It had been thirty years since anyone had opened the dollhouse.",
         "It had been thirty years since anyone had played with the dolls.",
-        "They had been put in the attic, their girl had grown up, and they were forgotten…",
-        "Until…. the attic door swung open.",
-        "“Come up here, honey! I want to show you some of my old toys.”",
-        "“I wonder if Mom and Dad kept the—they did! My dollhouse!”",
-        "“I used to LOVE this thing. Here, let’s bring it downstairs so you can play with it.”",
-        "“See? The rooms shift around, so you can rearrange the house however you want!”",
-        "“I don’t like these toys. They’re so old.”",
-        "“What? No, you’ll love these! They’re not ‘old,’ they’re just…”",
-        "“Classic.”",
-        "“You’ll have fun. Use your imagination. Be resourceful.”",
-        "“You’re a smart boy. You can figure out how to keep yourself entertained.”",
+        "They had been put in the attic, their girl had grown up, and they were forgottenï¿½",
+        "Untilï¿½. the attic door swung open.",
+        "ï¿½Come up here, honey! I want to show you some of my old toys.ï¿½",
+        "ï¿½I wonder if Mom and Dad kept theï¿½they did! My dollhouse!ï¿½",
+        "ï¿½I used to LOVE this thing. Here, letï¿½s bring it downstairs so you can play with it.ï¿½",
+        "ï¿½See? The rooms shift around, so you can rearrange the house however you want!ï¿½",
+        "ï¿½I donï¿½t like these toys. Theyï¿½re so old.ï¿½",
+        "ï¿½What? No, youï¿½ll love these! Theyï¿½re not ï¿½old,ï¿½ theyï¿½re justï¿½ï¿½",
+        "ï¿½Classic.ï¿½",
+        "ï¿½Youï¿½ll have fun. Use your imagination. Be resourceful.ï¿½",
+        "ï¿½Youï¿½re a smart boy. You can figure out how to keep yourself entertained.ï¿½",
         "The dollhouse shifted. The dolls slid to the side in a stiff plastic heap.",
-        "Betsy’s head poked out of the bedroom doorway. She smiled at the sky.",
-        "“Hold on, I remember you… it has been a while hasn't it?”",
-        "“This is Betsy. She was my favorite.",
+        "Betsyï¿½s head poked out of the bedroom doorway. She smiled at the sky.",
+        "ï¿½Hold on, I remember youï¿½ it has been a while hasn't it?ï¿½",
+        "ï¿½This is Betsy. She was my favorite.",
         "The Mother combed her fingers through Betsy's hair, making sure to push it back from her face.",
-        "“She was mas my best friend. Get it? Betsy my bestie.”",
+        "ï¿½She was mas my best friend. Get it? Betsy my bestie.ï¿½",
         "Betsy was lifted out of the doorway. Smiling at the sky.",
         "She was so happy to see her girl again.",
-        "“I’ll bring her back in a minute. Play with the other dolls in the meantime.”",
-        "“Just… don’t do anything weird.”",
+        "ï¿½Iï¿½ll bring her back in a minute. Play with the other dolls in the meantime.ï¿½",
+        "ï¿½Justï¿½ donï¿½t do anything weird.ï¿½",
         "After staying untouched for thirty years, Betsy is separated from her fellow toys.",
         "She locks eyes with Polly, her closest companion, as she is carried away.",
-        "“Finally, we’ll be played with again! I told everyone it would happen one day!”",
-        "Polly didn’t look so sure…",
+        "ï¿½Finally, weï¿½ll be played with again! I told everyone it would happen one day!ï¿½",
+        "Polly didnï¿½t look so sureï¿½",
     };
 
     private void Start()
@@ -168,7 +168,7 @@ public class IntroCutsceneDialog : MonoBehaviour
     IEnumerator WaitForFade()
     {
         yield return new WaitUntil(isAlphaReady);
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
 
     bool isAlphaReady()

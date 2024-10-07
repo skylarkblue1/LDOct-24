@@ -97,6 +97,11 @@ public class StoryTriggerZone : MonoBehaviour
                 originalSpeeds[count] = ogSpeed;
                 count++;
             }
+            PlayerAttack atk = obj.GetComponent<PlayerAttack>();
+            if (atk != null)
+            {
+                atk.enabled = !freeze;
+            }
         }
     }
 }
