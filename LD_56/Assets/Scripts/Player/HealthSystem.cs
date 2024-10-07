@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -6,8 +7,10 @@ using UnityEngine;
 public class HealthSystem : MonoBehaviour
 {
 
-    public int health;
-    public int maxHealth;
+    [SerializeField]
+    private int health;
+
+    private int maxHealth;
 
     // Start is called before the first frame update
     void Start()
@@ -29,5 +32,36 @@ public class HealthSystem : MonoBehaviour
         {
             Debug.Log("ded");
         }
+    }
+
+    public bool IsDead()
+    {
+        return health <= 0;
+    }
+
+    public void IncreaseHealth(int amount)
+    {
+        this.health = Mathf.Min(maxHealth, health + amount);
+    }
+
+    public void DecreaseHealth(int amount)
+    {
+        this.health = Mathf.Max(0, health - amount);
+        Debug.Log(health);
+    }
+
+    public void SetHealth(int health)
+    {
+        this.health = Mathf.Min(maxHealth, health);
+    }
+
+    public int GetHealth()
+    {
+        return health;
+    }
+
+    public int GetMaxHealth()
+    {
+        return health;
     }
 }

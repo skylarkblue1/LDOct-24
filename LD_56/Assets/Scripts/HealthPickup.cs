@@ -17,8 +17,8 @@ public class HealthPickup : MonoBehaviour
         if(collision.gameObject.tag == "Player")
         {
             Debug.Log("Player walked into the health pickup");
-            health.health = Mathf.Min(health.health + 10, health.maxHealth);
-            Debug.Log(health.health);
+            health.IncreaseHealth(10);
+            Debug.Log(health.GetHealth());
             Destroy(gameObject);
         }
     }
