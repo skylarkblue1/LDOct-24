@@ -1461,7 +1461,7 @@ MonoBehaviour:
     Auctor tellus molestie est eros maximus ridiculus placerat erat. Adipiscing '
   narrativeBox: {fileID: 1845033936}
   lifespan: 5
-  reactivateable: 1
+  Reactivateable: 0
 --- !u!65 &1658294716
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1690,6 +1690,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1246707307449129445, guid: 4df357f54554f684b9240b3de9581294, type: 3}
+      propertyPath: CurrentSong
+      value: 
+      objectReference: {fileID: 11400000, guid: 9eadaa0a1f538934b9e8233d90a5961c, type: 2}
     - target: {fileID: 2553459750045435213, guid: 4df357f54554f684b9240b3de9581294, type: 3}
       propertyPath: m_Name
       value: Jukebox
@@ -2106,7 +2110,7 @@ MonoBehaviour:
   narrativeText: Fish!
   narrativeBox: {fileID: 1845033936}
   lifespan: 5
-  reactivateable: 0
+  Reactivateable: 0
 --- !u!1 &1845033932
 GameObject:
   m_ObjectHideFlags: 0
