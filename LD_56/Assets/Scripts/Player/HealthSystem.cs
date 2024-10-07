@@ -9,8 +9,15 @@ public class HealthSystem : MonoBehaviour
 
     [SerializeField]
     private int health;
+    [SerializeField]
+    private  List<AudioClip> hurtSFX;
 
     private int maxHealth;
+    private AudioSource audioSource;
+
+    private void Awake() {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +38,7 @@ public class HealthSystem : MonoBehaviour
         if (health <= 0)
         {
             Debug.Log("ded");
+            SceneController.Instance.LoadScene(1);
         }
     }
 
@@ -46,6 +54,9 @@ public class HealthSystem : MonoBehaviour
 
     public void DecreaseHealth(int amount)
     {
+        if(!audioSource.isPlaying) {
+            audioSource.PlayOneShot(hurtSFX[UnityEngine.Random.Range(0, hurtSFX.Count)]);
+        }
         this.health = Mathf.Max(0, health - amount);
         Debug.Log(health);
     }

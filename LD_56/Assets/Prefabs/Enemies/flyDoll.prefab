@@ -137,10 +137,11 @@ MonoBehaviour:
   walkPointRange: 500
   timeBetweenAttacks: 0.5
   sightRange: 200
-  attackRange: 1
+  attackRange: 100
   health: 10
   maxHealth: 10
   attackDamage: 2
+  story: {fileID: 0}
 --- !u!54 &4994258849537317579
 Rigidbody:
   m_ObjectHideFlags: 0
