@@ -1,22 +1,6 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Runtime.ConstrainedExecution;
-using System.Security.Cryptography;
-using System.Threading;
-using Unity.VisualScripting.Antlr3.Runtime;
-using Unity.VisualScripting;
-using UnityEditor.Build.Content;
-using UnityEditor.Experimental.GraphView;
-using UnityEditor;
 using UnityEngine;
-using static UnityEngine.UIElements.UxmlAttributeDescription;
-using UnityEngine.InputSystem.EnhancedTouch;
-using UnityEngine.InputSystem;
-using UnityEngine.ProBuilder.Shapes;
-using UnityEngine.SocialPlatforms;
-using UnityEngine.UIElements;
 using TMPro;
 using UnityEngine.SceneManagement;
 
