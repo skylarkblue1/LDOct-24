@@ -425,6 +425,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 418211264}
   - {fileID: 1440627220}
   - {fileID: 1327124116}
   - {fileID: 807716738}
@@ -796,7 +797,7 @@ RectTransform:
   m_LocalScale: {x: 9.665374, y: 5.2705, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1440627220}
+  m_Father: {fileID: 98867584}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1356,7 +1357,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 484, y: 263}
+  m_AnchoredPosition: {x: 504, y: 263}
   m_SizeDelta: {x: 968, y: 526}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &807716739
@@ -1981,7 +1982,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4.000061, y: -3.0108032}
+  m_AnchoredPosition: {x: -0, y: -3.0108032}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1188689428
@@ -2113,7 +2114,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 483.99997, y: 262.99997}
+  m_AnchoredPosition: {x: 497, y: 262.99997}
   m_SizeDelta: {x: 968, y: 526}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1327124117
@@ -2476,7 +2477,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 418211264}
   - {fileID: 1866055244}
   - {fileID: 1955756689}
   - {fileID: 1531906710}
@@ -3223,7 +3223,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4, y: -3.0107422}
+  m_AnchoredPosition: {x: 1, y: -3.0107422}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1686198415
