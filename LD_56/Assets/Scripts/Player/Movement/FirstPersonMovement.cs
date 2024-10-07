@@ -8,8 +8,7 @@ using UnityEngine.InputSystem;
 public class FirstPersonMovement : MonoBehaviour
 {
     [Header("Movement Speed")]
-    [SerializeField]
-    float moveSpeed;
+    public float moveSpeed;
     [SerializeField]
     float gravityValue;
 
