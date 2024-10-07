@@ -10,6 +10,8 @@ public class FirstPersonMovement : MonoBehaviour
     [Header("Movement Speed")]
     [SerializeField]
     float moveSpeed;
+    [SerializeField]
+    float gravityValue;
 
     [Header("Look Controls")]
 
@@ -31,8 +33,9 @@ public class FirstPersonMovement : MonoBehaviour
     void Update()
     {
         Move();
+        Gravity();
     }
-
+    
     private void Move() {
         Vector2 movement = InputManager.Instance.GetPlayerMovement();
         Vector3 move = new (movement.x, 0f, movement.y);
@@ -42,5 +45,11 @@ public class FirstPersonMovement : MonoBehaviour
         if (move != Vector3.zero) {
             gameObject.transform.forward = move;
         }
+    }
+
+    private void Gravity()
+    {
+        playerVelocity.y += gravityValue * Time.deltaTime;
+        controller.Move(playerVelocity * Time.deltaTime);
     }
 }
