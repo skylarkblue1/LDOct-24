@@ -35061,6 +35061,7 @@ GameObject:
   - component: {fileID: 1190217159}
   - component: {fileID: 1190217157}
   - component: {fileID: 1190217160}
+  - component: {fileID: 1190217161}
   m_Layer: 0
   m_Name: Projectile Object Pool
   m_TagString: Untagged
@@ -35122,7 +35123,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 701dea59d88c0d847a429b2def279740, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToCopy: {fileID: 5659728724122833927, guid: 480aaca3525c07c4ab08c4f82a891cd2, type: 3}
+  objectToCopy: {fileID: 5659728724122833927, guid: 0c36d6ef151c4f04f890235e583244a0, type: 3}
+  maxObjectCount: 50
+  objectPool: []
+--- !u!114 &1190217161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1190217156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 701dea59d88c0d847a429b2def279740, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToCopy: {fileID: 5659728724122833927, guid: dee203d94a376424ea76de5dece4fe96, type: 3}
   maxObjectCount: 50
   objectPool: []
 --- !u!1001 &1221062106
