@@ -41,7 +41,7 @@ public class ProjectileBehavior : MonoBehaviour
 
     private void OnCollisionEnter(Collision other) {
         if (other.gameObject.CompareTag("Enemy")) {
-            // Damage Enemy
+            other.gameObject.GetComponent<EnemyAI>().TookDamage();
         }
         gameObject.SetActive(false);
     }
