@@ -11,7 +11,6 @@ public class NarrativeTextController : MonoBehaviour
     private void Awake() {
         textBox = transform.parent.gameObject;
         textBox.SetActive(false);
-
         tmp = GetComponent<TextMeshProUGUI>();
         tmp.text = "";
     }
@@ -23,7 +22,7 @@ public class NarrativeTextController : MonoBehaviour
 
     // The StoryTriggerZone will try and disable the textBox, if the text box still has the same text up on the trigger zone
     public void TryDisableTextBox(string triggerZoneText) {
-        if (triggerZoneText == tmp.text) {
+        if (triggerZoneText == tmp.text || triggerZoneText == "") {
             textBox.SetActive(false);
         }
     }
