@@ -74,7 +74,7 @@ public class EnemyAI : MonoBehaviour
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, PlayerLayer);
         projectileInHitRange = Physics.CheckSphere(transform.position, attackRange, ProjectileLayer);
 
-        if(projectileInHitRange) TookDamage();
+        // if(projectileInHitRange) TookDamage();
 
         // anti-error conditional
         if (willSelfDestruct)
@@ -98,7 +98,7 @@ public class EnemyAI : MonoBehaviour
         if (playerInSightRange && playerInAttackRange) AttackPlayer();
     }
 
-    void TookDamage()
+    public void TookDamage()
     {
         if (isOnCooldown) return;
 
