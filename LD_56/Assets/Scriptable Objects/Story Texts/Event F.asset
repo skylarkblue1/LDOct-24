@@ -13,6 +13,4 @@ MonoBehaviour:
   m_Name: Event F
   m_EditorClassIdentifier: 
   texts:
-  - "\u201CWait\u2026 where is everybody? The townhall should have started twenty
-    minutes ago\u2026\u201D"
-  - "\u201CMaybe they left a note on the fridge?\u201D"
+  - "Wait, what? I don\u2019t remember there being a hallway right here\u2026"

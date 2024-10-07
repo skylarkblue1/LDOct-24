@@ -37652,7 +37652,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1104817180582905961, guid: d0507a15f2d2fde4f87e18793e99ec42, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -584.61475
+      value: -553.2
       objectReference: {fileID: 0}
     - target: {fileID: 1104817180582905961, guid: d0507a15f2d2fde4f87e18793e99ec42, type: 3}
       propertyPath: m_LocalRotation.w
@@ -37688,7 +37688,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1615304232194958286, guid: d0507a15f2d2fde4f87e18793e99ec42, type: 3}
       propertyPath: lifespan
-      value: 3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 1615304232194958286, guid: d0507a15f2d2fde4f87e18793e99ec42, type: 3}
       propertyPath: storyText
@@ -43940,7 +43940,7 @@ PrefabInstance:
     - target: {fileID: 1615304232194958286, guid: d0507a15f2d2fde4f87e18793e99ec42, type: 3}
       propertyPath: storyText
       value: 
-      objectReference: {fileID: 11400000, guid: ed12f6f012af83f44b976bdc0c28b16d, type: 2}
+      objectReference: {fileID: 11400000, guid: 74db4f5670d605144a28698a4a3b405a, type: 2}
     - target: {fileID: 1615304232194958286, guid: d0507a15f2d2fde4f87e18793e99ec42, type: 3}
       propertyPath: narrativeBox
       value: 
