@@ -18,8 +18,7 @@ public class EnemyAI : MonoBehaviour
     private bool alreadyAttacked;
 
     [Header("AI Configuration")]
-    [SerializeField]
-    private bool disableAI;
+    public bool disableAI;
     [SerializeField]
     private float walkPointRange;
     [SerializeField]
@@ -72,7 +71,12 @@ public class EnemyAI : MonoBehaviour
         transform.LookAt(lookPos);
 
         if (disableAI)
+        {
+            agent.isStopped = true;
+            walkPoint = transform.position;
             return;
+        }
+        agent.isStopped = false;
 
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, PlayerLayer);
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, PlayerLayer);
