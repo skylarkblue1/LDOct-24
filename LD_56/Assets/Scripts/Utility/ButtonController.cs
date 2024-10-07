@@ -27,9 +27,8 @@ public class ButtonController : MonoBehaviour
 
     IEnumerator WaitForFade()
     {
-        bool canvasAlpha = menuCanvas.alpha <= 0;
         yield return new WaitUntil(isAlphaReady);
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
 
     bool isAlphaReady()

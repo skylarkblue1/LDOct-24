@@ -22,13 +22,10 @@ public class FadeUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.parent.gameObject.activeSelf)
-        {
-            float fadeFactor = fadeSpeed / 1000;
-            canvasGroup.alpha = toggleFadeOut ? canvasGroup.alpha - fadeFactor : canvasGroup.alpha + fadeFactor;
-            return;
-        }
+        float fadeFactor = fadeSpeed / 1000;
+        canvasGroup.alpha = toggleFadeOut ? canvasGroup.alpha - fadeFactor : canvasGroup.alpha + fadeFactor;
 
-        canvasGroup.alpha = toggleFadeOut ? 1 : 0;
+
+        canvasGroup.alpha = Mathf.Max(canvasGroup.alpha, Math.Min(1, canvasGroup.alpha));
     }
 }
