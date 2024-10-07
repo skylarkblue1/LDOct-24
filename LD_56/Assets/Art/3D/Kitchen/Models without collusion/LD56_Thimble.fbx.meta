@@ -3,7 +3,12 @@ guid: 15f8ac4217ee21a41850cbd4e84c617b
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Thimble
+    second: {fileID: 2100000, guid: d3142634670e33648aa99fc220124a93, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
