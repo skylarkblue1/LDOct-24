@@ -94,13 +94,14 @@ public class SoundtrackManager : MonoBehaviour
         loopSource.Stop();
         if (CurrentSong.Intro != null) {
             introSource.Play();
-            introSource.time = 58;
             playingIntro = true;
+            StartCoroutine(LoopHandler());
+        } else
+        {
+            loopSource.Play();
         }
 
-        StartCoroutine(LoopHandler());
     }
-    Boolean pause = false;
 
     private IEnumerator LoopHandler()
     {
