@@ -12,7 +12,7 @@ public class AudioManager : MonoBehaviour
 
     [Header("Audio Sources")]
     [SerializeField]
-    AudioSource jukebox;
+    GameObject jukebox;
     List<AudioSource> allSfxSources;
 
     [Header("Settings Slider")]
@@ -21,15 +21,17 @@ public class AudioManager : MonoBehaviour
     [SerializeField]
     Slider sfxSlider;
 
-
+    AudioSource[] jukeboxSources;
     private void Awake() {
+        jukeboxSources = jukebox.GetComponents<AudioSource>();
         allSfxSources = GameObject.FindObjectsOfType<AudioSource>().ToList<AudioSource>();
-        allSfxSources.Remove(jukebox);
+        foreach (AudioSource audioSource in jukeboxSources)
+            allSfxSources.Remove(audioSource);
+        
     }
 
     private void Start() {
-        jukebox.volume = audioSettings.MusicVolume;
-        
+        SetMusicVolume();
         if (musicSlider) {
             // Update slider volume
             musicSlider.value = audioSettings.MusicVolume;
@@ -46,7 +48,8 @@ public class AudioManager : MonoBehaviour
     }
 
     public void SetMusicVolume() {
-        jukebox.volume = audioSettings.MusicVolume;
+        foreach (AudioSource audioSource in jukeboxSources)
+            audioSource.volume = audioSettings.MusicVolume;
     }
 
     public void SetSfxVolume() {

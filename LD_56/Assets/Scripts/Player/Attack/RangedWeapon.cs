@@ -15,7 +15,7 @@ public class RangedWeapon : MonoBehaviour
     private Transform spawnPos;
 
     [SerializeField]
-    private ObjectPooler ammoPool;
+    private RandomizedObjectPool ammoPool;
 
     private float timer;
 
@@ -27,9 +27,10 @@ public class RangedWeapon : MonoBehaviour
     public void Fire() {
         if (timer < cooldown) { return; }
         timer = 0f;
-        GameObject curProjectile = ammoPool.GetPooledObject();
+        GameObject curProjectile = ammoPool.GetRandomObject();
         curProjectile.transform.forward = Camera.main.transform.forward;
         curProjectile.transform.position = spawnPos.position;
+        curProjectile.layer = 7;
         curProjectile.SetActive(true);
     }    
 }
