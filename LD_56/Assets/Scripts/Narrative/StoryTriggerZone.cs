@@ -70,6 +70,7 @@ public class StoryTriggerZone : MonoBehaviour
 
     private void setDisableEnemiesAI(bool disable)
     {
+        enemies = GameObject.FindGameObjectsWithTag("Enemy");
         foreach(GameObject obj in enemies)
         {
             EnemyAI ai = obj.GetComponent<EnemyAI>();

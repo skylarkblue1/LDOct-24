@@ -1,22 +1,6 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Runtime.ConstrainedExecution;
-using System.Security.Cryptography;
-using System.Threading;
-using Unity.VisualScripting.Antlr3.Runtime;
-using Unity.VisualScripting;
-using UnityEditor.Build.Content;
-using UnityEditor.Experimental.GraphView;
-using UnityEditor;
 using UnityEngine;
-using static UnityEngine.UIElements.UxmlAttributeDescription;
-using UnityEngine.InputSystem.EnhancedTouch;
-using UnityEngine.InputSystem;
-using UnityEngine.ProBuilder.Shapes;
-using UnityEngine.SocialPlatforms;
-using UnityEngine.UIElements;
 using TMPro;
 using UnityEngine.SceneManagement;
 
@@ -56,7 +40,7 @@ public class IntroCutsceneDialog : MonoBehaviour
         "They had been put in the attic, their girl had grown up, and they were forgotten...",
         "Until.... the attic door swung open.",
         "\"Come up here, honey! I want to show you some of my old toys.\"",
-        "\"I wonder if Mom and Dad kept the—they did! My dollhouse!\"",
+        "\"I wonder if Mom and Dad kept theï¿½they did! My dollhouse!\"",
         "\"I used to LOVE this thing. Here, let's bring it downstairs so you can play with it.\"",
         "\"See? The rooms shift around, so you can rearrange the house however you want!\"",
         "\"I don't like these toys. They're so old.\"",
@@ -168,7 +152,7 @@ public class IntroCutsceneDialog : MonoBehaviour
     IEnumerator WaitForFade()
     {
         yield return new WaitUntil(isAlphaReady);
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
 
     bool isAlphaReady()
