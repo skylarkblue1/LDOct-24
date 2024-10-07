@@ -1549,6 +1549,10 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 2617350365867281124, guid: b9e0108a2bbf5c3468f4f4f12641ad1f, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2617350365867281124, guid: b9e0108a2bbf5c3468f4f4f12641ad1f, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -1559,6 +1563,10 @@ PrefabInstance:
     - target: {fileID: 3954333306636824317, guid: b9e0108a2bbf5c3468f4f4f12641ad1f, type: 3}
       propertyPath: health
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3960220448829863201, guid: b9e0108a2bbf5c3468f4f4f12641ad1f, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4358743560846020519, guid: b9e0108a2bbf5c3468f4f4f12641ad1f, type: 3}
       propertyPath: moveSpeed
@@ -4668,6 +4676,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1273720857}
+    - target: {fileID: 1468524029638462203, guid: da329906a0688f1449fdf984250d847c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1519798847314890159, guid: da329906a0688f1449fdf984250d847c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1538192449496957910, guid: da329906a0688f1449fdf984250d847c, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -4764,6 +4780,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 21785580}
+    - target: {fileID: 2363934256668362634, guid: da329906a0688f1449fdf984250d847c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 2371873935687157976, guid: da329906a0688f1449fdf984250d847c, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -4912,6 +4932,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1438783788}
+    - target: {fileID: 3462076498277619333, guid: da329906a0688f1449fdf984250d847c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3490234692550039727, guid: da329906a0688f1449fdf984250d847c, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -4991,6 +5015,10 @@ PrefabInstance:
     - target: {fileID: 4478513599333107220, guid: da329906a0688f1449fdf984250d847c, type: 3}
       propertyPath: m_VersionIndex
       value: 2649
+      objectReference: {fileID: 0}
+    - target: {fileID: 4494400460206410674, guid: da329906a0688f1449fdf984250d847c, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4502302132059212438, guid: da329906a0688f1449fdf984250d847c, type: 3}
       propertyPath: m_Mesh
@@ -5108,6 +5136,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 404783076}
+    - target: {fileID: 5383719781015885087, guid: da329906a0688f1449fdf984250d847c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5456757051232226603, guid: da329906a0688f1449fdf984250d847c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5484387861933589854, guid: da329906a0688f1449fdf984250d847c, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -5304,6 +5340,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1612426021}
+    - target: {fileID: 7971341551408331588, guid: da329906a0688f1449fdf984250d847c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7986360476526594171, guid: da329906a0688f1449fdf984250d847c, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -5320,6 +5360,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 757295867}
+    - target: {fileID: 8244532142655271379, guid: da329906a0688f1449fdf984250d847c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8282030312295611728, guid: da329906a0688f1449fdf984250d847c, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -5331,6 +5375,10 @@ PrefabInstance:
     - target: {fileID: 8321399799309052576, guid: da329906a0688f1449fdf984250d847c, type: 3}
       propertyPath: m_VersionIndex
       value: 2772
+      objectReference: {fileID: 0}
+    - target: {fileID: 8343583076102095762, guid: da329906a0688f1449fdf984250d847c, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8346612704856480553, guid: da329906a0688f1449fdf984250d847c, type: 3}
       propertyPath: m_Mesh
@@ -7263,15 +7311,15 @@ PrefabInstance:
       objectReference: {fileID: 1986696163}
     - target: {fileID: 6349583299236285464, guid: 62ca18ead9d43744fb42ad36311bcf0b, type: 3}
       propertyPath: sightRange
-      value: 50
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 6349583299236285464, guid: 62ca18ead9d43744fb42ad36311bcf0b, type: 3}
       propertyPath: attackRange
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6349583299236285464, guid: 62ca18ead9d43744fb42ad36311bcf0b, type: 3}
       propertyPath: walkPointRange
-      value: 200
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 8610065633389989992, guid: 62ca18ead9d43744fb42ad36311bcf0b, type: 3}
       propertyPath: m_Speed
@@ -12824,15 +12872,15 @@ PrefabInstance:
       objectReference: {fileID: 1986696163}
     - target: {fileID: 6349583299236285464, guid: 62ca18ead9d43744fb42ad36311bcf0b, type: 3}
       propertyPath: sightRange
-      value: 50
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 6349583299236285464, guid: 62ca18ead9d43744fb42ad36311bcf0b, type: 3}
       propertyPath: attackRange
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6349583299236285464, guid: 62ca18ead9d43744fb42ad36311bcf0b, type: 3}
       propertyPath: walkPointRange
-      value: 200
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 8610065633389989992, guid: 62ca18ead9d43744fb42ad36311bcf0b, type: 3}
       propertyPath: m_Speed
