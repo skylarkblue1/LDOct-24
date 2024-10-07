@@ -7,6 +7,9 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField]
     private RangedWeapon currentWeapon;
 
+    // Leave this for enemy ai to read.
+    public int attackDamage;
+
     private InputManager inputManager;
     private void Awake() {
         inputManager = InputManager.Instance;
