@@ -34,6 +34,10 @@ public class EnemyAI : MonoBehaviour
     [SerializeField]
     private int attackDamage;
 
+    [Header("Stats Configuration")]
+    [SerializeField]
+    private StoryTriggerZone story;
+
     private Transform playerTransform;
     private HealthSystem healthSystem;
     private PlayerAttack playerAttack;
@@ -124,6 +128,7 @@ public class EnemyAI : MonoBehaviour
     void CheckIsDead()
     {
         if (health > 0) return;
+        if (story != null) story.TriggerStory();
         Debug.Log("ded");
         this.willSelfDestruct = true;
         Destroy(this.gameObject);
