@@ -1,18 +1,40 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class ButtonController : MonoBehaviour
 {
+    public GameObject mainMenu;
 
     public GameObject settingPopup;
 
     public GameObject creditsPopup;
 
+    private CanvasGroup menuCanvas;
+    private FadeUI menuFadeScript;
+
+    private void Start()
+    {
+        menuCanvas = mainMenu.GetComponent<CanvasGroup>();
+        menuFadeScript = mainMenu.GetComponent<FadeUI>();
+    }
+
     public void OnStartButton()
     {
-        SceneManager.LoadScene(1); //Make sure this goes to the game scene
+        menuFadeScript.toggleFadeOut = true;
+        StartCoroutine(WaitForFade());
+    }
+
+    IEnumerator WaitForFade()
+    {
+        bool canvasAlpha = menuCanvas.alpha <= 0;
+        yield return new WaitUntil(isAlphaReady);
+        SceneManager.LoadScene(1);
+    }
+
+    bool isAlphaReady()
+    {
+        return menuCanvas.alpha <= 0;
     }
 
 
