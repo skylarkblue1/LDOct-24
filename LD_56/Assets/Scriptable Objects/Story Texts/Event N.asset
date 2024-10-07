@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b543670b42ef1e149a5bd298998d5801, type: 3}
+  m_Name: Event N
+  m_EditorClassIdentifier: 
+  texts:
+  - "An attic? I didn\u2019t know we had an attic\u2026"
+  - "Wait\u2026 that\u2019s a real window! It\u2019s not a sticker on the wall!"
+  - I can get out through there!
+  - "Oh, come on\u2026"

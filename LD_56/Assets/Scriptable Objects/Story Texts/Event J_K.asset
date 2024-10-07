@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b543670b42ef1e149a5bd298998d5801, type: 3}
+  m_Name: Event J_K
+  m_EditorClassIdentifier: 
+  texts:
+  - "B-B-Bet\u2026syyyyy!"
+  - "Polly, there you are! Thank goodness you\u2019re\u2014"
+  - "... Wait\u2026What happened to you\u2026?"
+  - "He m-made me Real, B-Bet\u2026syyyy!"
+  - "Doesn\u2019t every d-doll want to be R-Real?"
+  - Who did this to you?
+  - "T-The Boy, Bet\u2026syyyyyy!"
+  - He wants to make Y-Youuuu Real, too!
+  - "Won\u2019t you l-let him make you Real?"
+  - "Won\u2019t you b-be Glad to be Real?"
+  - "I a-am so Glad, Bet\u2026syyyyyyyyyyyyyyy!"
+  - No!

@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class StoryTriggerZone : MonoBehaviour
 {
     [SerializeField]
-    private string narrativeText;
+    private StoryText_SO storyText;
     [SerializeField]
     private NarrativeTextController narrativeBox;
     [SerializeField]
@@ -25,16 +27,31 @@ public class StoryTriggerZone : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) {
         if (other.gameObject.CompareTag("Player") && !isActivated) {
-            isActivated = true;
-            narrativeBox.DisplayText(narrativeText);
-            StartCoroutine(ProcessLifespan());
-            SendMessageUpwards("ToggleZones", this, SendMessageOptions.DontRequireReceiver);
+            TriggerStory();
         }
     }
 
-    private IEnumerator ProcessLifespan() {
+    public void TriggerStory() {
+        isActivated = true;
+        StartCoroutine(ProcessText());
+        SendMessageUpwards("ToggleZones", this, SendMessageOptions.DontRequireReceiver);
+    }
+
+    private IEnumerator ProcessText() {
+        string currentText = "";
+        foreach (string text in storyText.texts)
+        {
+            currentText = text;
+            narrativeBox.DisplayText(text);
+            yield return new WaitForSeconds(lifespan);
+        }
         yield return new WaitForSeconds(lifespan);
-        narrativeBox.TryDisableTextBox(narrativeText);
+        StartCoroutine(ProcessLifespan(currentText));
+    }
+
+    private IEnumerator ProcessLifespan(string text) {
+        yield return new WaitForSeconds(lifespan);
+        narrativeBox.TryDisableTextBox(text);
         if (Reactivateable) {
             isActivated = false;
         } else  {
