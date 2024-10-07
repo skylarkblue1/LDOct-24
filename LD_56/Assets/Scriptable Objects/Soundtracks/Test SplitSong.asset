@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc26ad6a875279140b860cbe6ed91c89, type: 3}
   m_Name: Test SplitSong
   m_EditorClassIdentifier: 
-  intro: {fileID: 0}
-  loopable: {fileID: 8300000, guid: dd832daed078e844db66a7946cde1ba9, type: 3}
+  Intro: {fileID: 8300000, guid: dd832daed078e844db66a7946cde1ba9, type: 3}
+  Loopable: {fileID: 8300000, guid: 137756df48fdfc543aab750e57e44d90, type: 3}
