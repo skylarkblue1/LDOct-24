@@ -31,6 +31,7 @@ public class HealthSystem : MonoBehaviour
         if (health <= 0)
         {
             Debug.Log("ded");
+            SceneController.Instance.LoadScene(1);
         }
     }
 
