@@ -30,6 +30,7 @@ public class RangedWeapon : MonoBehaviour
         GameObject curProjectile = ammoPool.GetRandomObject();
         curProjectile.transform.forward = Camera.main.transform.forward;
         curProjectile.transform.position = spawnPos.position;
+        curProjectile.layer = 7;
         curProjectile.SetActive(true);
     }    
 }
