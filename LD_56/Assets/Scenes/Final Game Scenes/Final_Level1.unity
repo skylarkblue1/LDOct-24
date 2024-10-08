@@ -924,6 +924,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 223585113931012736, guid: f6db8604917273949adc1902157e959d, type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 1986696163}
     - target: {fileID: 1838618095018046481, guid: f6db8604917273949adc1902157e959d, type: 3}
       propertyPath: m_Name
       value: Polly
