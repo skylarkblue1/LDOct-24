@@ -22,7 +22,8 @@ public class FadeUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float fadeFactor = fadeSpeed / 1000;
+        float deltaTime = Time.deltaTime;
+        float fadeFactor = fadeSpeed * deltaTime;
         canvasGroup.alpha = toggleFadeOut ? canvasGroup.alpha - fadeFactor : canvasGroup.alpha + fadeFactor;
 
 
