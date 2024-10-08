@@ -33,17 +33,17 @@ public class AudioManager : MonoBehaviour
     private void Start() {
         SetMusicVolume();
         if (musicSlider) {
-            // Update slider volume
             musicSlider.value = audioSettings.MusicVolume;
-            // Update slider handle to proper position
-            musicSlider.handleRect.anchorMin = new(audioSettings.MusicVolume,0f);
-            musicSlider.handleRect.anchorMax = new(audioSettings.MusicVolume,1f);
+            musicSlider.minValue = 0f;
+            musicSlider.maxValue = 1f;
+            musicSlider.onValueChanged.AddListener(UpdateMusicVolume);
         }
 
         if (sfxSlider) {
             sfxSlider.value = audioSettings.SfxVolume;
-            sfxSlider.handleRect.anchorMin = new(audioSettings.SfxVolume,0f);
-            sfxSlider.handleRect.anchorMax = new(audioSettings.SfxVolume,1f);
+            sfxSlider.minValue = 0f;
+            sfxSlider.maxValue = 1f;
+            sfxSlider.onValueChanged.AddListener(UpdateSfxVolume);
         }
     }
 
@@ -59,14 +59,12 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public void UpdateMusicVolume(float vol) {
-        vol = Mathf.Clamp(vol, 0f,1f);
+    public void UpdateMusicVolume(System.Single vol) {
         audioSettings.MusicVolume = vol;
         SetMusicVolume();
     }
 
-    public void UpdateSfxVolume(float vol) {
-        vol = Mathf.Clamp(vol, 0f,1f);
+    public void UpdateSfxVolume(System.Single vol) {
         audioSettings.SfxVolume = vol;
         SetSfxVolume();
     }
