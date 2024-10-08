@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class AudioManager : MonoBehaviour
 {
+    static public AudioManager Instance { get; private set; }
+
     [Header("Volume Control")]
     [SerializeField]
     AudioSO audioSettings;
@@ -23,11 +25,20 @@ public class AudioManager : MonoBehaviour
 
     AudioSource[] jukeboxSources;
     private void Awake() {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            Instance = this;
+        }
+
         jukeboxSources = jukebox.GetComponents<AudioSource>();
         allSfxSources = GameObject.FindObjectsOfType<AudioSource>().ToList<AudioSource>();
+        
         foreach (AudioSource audioSource in jukeboxSources)
             allSfxSources.Remove(audioSource);
-        
     }
 
     private void Start() {
@@ -54,9 +65,7 @@ public class AudioManager : MonoBehaviour
 
     public void SetSfxVolume() {
         foreach (var audSor in allSfxSources)
-        {
             audSor.volume = audioSettings.SfxVolume;
-        }
     }
 
     public void UpdateMusicVolume(System.Single vol) {
@@ -67,6 +76,17 @@ public class AudioManager : MonoBehaviour
     public void UpdateSfxVolume(System.Single vol) {
         audioSettings.SfxVolume = vol;
         SetSfxVolume();
+    }
+
+    public void MuteSFX()
+    {
+        foreach (var audSor in allSfxSources)
+            audSor.enabled = false;
+    }
+    public void UnmuteSFX()
+    {
+        foreach (var audSor in allSfxSources)
+            audSor.enabled = true;
     }
 
     public float GetMusicVolume() {

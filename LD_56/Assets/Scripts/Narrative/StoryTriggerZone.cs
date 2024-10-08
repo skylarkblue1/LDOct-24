@@ -17,16 +17,9 @@ public class StoryTriggerZone : MonoBehaviour
 
     private bool isActivated = false;
 
-    private GameObject[] enemies;
-    private GameObject[] players;
-
-    private float[] originalSpeeds;
 
     // Start is called before the first frame update
    private void OnEnable() {
-        enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        players = GameObject.FindGameObjectsWithTag("Player");
-        originalSpeeds = new float[players.Length];
         isActivated = false;
    }
 
@@ -43,8 +36,7 @@ public class StoryTriggerZone : MonoBehaviour
     }
 
     private IEnumerator ProcessText() {
-        setDisableEnemiesAI(true);
-        setFreezePlayer(true);
+        PauseManager.Instance.PauseForNarrative();
         string currentText = "";
         foreach (string text in storyText.texts)
         {
@@ -58,46 +50,12 @@ public class StoryTriggerZone : MonoBehaviour
 
     private IEnumerator ProcessLifespan(string text) {
         yield return null;
-        setDisableEnemiesAI(false);
-        setFreezePlayer(false);
+        PauseManager.Instance.ResumeForNarrative();
         narrativeBox.TryDisableTextBox(text);
         if (Reactivateable) {
             isActivated = false;
         } else  {
             gameObject.SetActive(false);
-        }
-    }
-
-    private void setDisableEnemiesAI(bool disable)
-    {
-        enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        foreach(GameObject obj in enemies)
-        {
-            EnemyAI ai = obj.GetComponent<EnemyAI>();
-            if (ai != null)
-                ai.disableAI = disable;
-        }
-    }
-
-    private void setFreezePlayer(bool freeze)
-    {
-        int count = 0;
-        foreach(GameObject obj in players)
-        {
-            FirstPersonMovement move = obj.GetComponent<FirstPersonMovement>();
-            if (move != null)
-            {
-                float ogSpeed = move.moveSpeed;
-                move.moveSpeed = freeze ? 0 : originalSpeeds[count];
-
-                originalSpeeds[count] = ogSpeed;
-                count++;
-            }
-            PlayerAttack atk = obj.GetComponent<PlayerAttack>();
-            if (atk != null)
-            {
-                atk.enabled = !freeze;
-            }
         }
     }
 }
