@@ -28,13 +28,6 @@ public class HealthSystem : MonoBehaviour
 
     public void Update()
     {
-        if (Input.GetKey("p"))
-        {
-            // just for debugging
-            health = health - 10;
-            Debug.Log(health);
-        }
-
         if (health <= 0)
         {
             Debug.Log("ded");
@@ -73,6 +66,6 @@ public class HealthSystem : MonoBehaviour
 
     public int GetMaxHealth()
     {
-        return health;
+        return maxHealth;
     }
 }

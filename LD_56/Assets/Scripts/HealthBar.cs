@@ -5,22 +5,30 @@ using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject player;
+
     public Image imgHealthBar;
 
-    public void HealthBarDown(int damage)
+    private HealthSystem healthSystem;
+
+    private void Start()
     {
-        imgHealthBar.fillAmount = imgHealthBar.fillAmount - (damage * 0.01f);
+        healthSystem = player.GetComponent<HealthSystem>();
     }
 
-    public void HealthBarUp(int heal)
-    {
-        imgHealthBar.fillAmount = imgHealthBar.fillAmount + (heal * 0.01f);
-    }
+    private float previousFrameHealth;
 
-    public void HealthBarReset()
+    private void Update()
     {
-        imgHealthBar.fillAmount = 1;
-    }
+        float maxHealth = healthSystem.GetMaxHealth();
+        float health = healthSystem.GetHealth();
 
-    // Yes this script is a terrible way of doing it but it should work
+        if (previousFrameHealth != health)
+        {
+            float barScaled = (health / maxHealth);
+            imgHealthBar.fillAmount = barScaled;
+            previousFrameHealth = health;
+        }
+    }
 }
