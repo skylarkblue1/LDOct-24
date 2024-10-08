@@ -9,6 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Final Game Scenes/Main Menu.unity
     guid: aad07b839ba75df43ae7da0486563f06
   - enabled: 1
+    path: Assets/Scenes/Final Game Scenes/Intro Cutscene.unity
+    guid: 3c0f406ba112ed14c96cda9c98ca4cea
+  - enabled: 1
     path: Assets/Scenes/Final Game Scenes/Final_Level1.unity
     guid: d991fdeedf3949846a9c0dbf6969df96
+  - enabled: 1
+    path: Assets/Scenes/Final Game Scenes/End Scene.unity
+    guid: e7ccdfc35a917324e9a997286764b362
   m_configObjects: {}

@@ -481,6 +481,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jukebox
       objectReference: {fileID: 0}
+    - target: {fileID: 4129758723372692465, guid: 5c98ac115d258e948a25a668feb94bb4, type: 3}
+      propertyPath: CurrentSong
+      value: 
+      objectReference: {fileID: 11400000, guid: 3539f0f7df566fc49ba0fd76c9986569, type: 2}
     - target: {fileID: 6264558614252371287, guid: 5c98ac115d258e948a25a668feb94bb4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1498.1
@@ -955,10 +959,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1440627220}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1920, y: 1080}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &418211265
 MonoBehaviour:
@@ -1749,6 +1753,54 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 925799828}
   m_CullTransparentMesh: 1
+--- !u!1 &966188077
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 966188079}
+  - component: {fileID: 966188078}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &966188078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 966188077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31c6f1d9f957b044d9edc4aa26d6dc2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSettings: {fileID: 11400000, guid: 7e2bd0ca75d5ae148bb94c40d9d8e1d0, type: 2}
+  jukebox: {fileID: 1122785320}
+  musicSlider: {fileID: 2108674864}
+  sfxSlider: {fileID: 1515830098}
+--- !u!4 &966188079
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 966188077}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1058109174
 GameObject:
   m_ObjectHideFlags: 0
@@ -1926,6 +1978,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1081318489}
   m_CullTransparentMesh: 1
+--- !u!1 &1122785320 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1989064917528042256, guid: 5c98ac115d258e948a25a668feb94bb4, type: 3}
+  m_PrefabInstance: {fileID: 173404946}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1162922220
 GameObject:
   m_ObjectHideFlags: 0
@@ -2215,7 +2272,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -177864.1, y: -102030.59}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1241334719
@@ -2735,10 +2792,10 @@ RectTransform:
   - {fileID: 807716738}
   m_Father: {fileID: 98867584}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1920, y: 1080}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1440627221
 MonoBehaviour:
@@ -4444,3 +4501,4 @@ SceneRoots:
   - {fileID: 1162922223}
   - {fileID: 1290456376}
   - {fileID: 173404946}
+  - {fileID: 966188079}

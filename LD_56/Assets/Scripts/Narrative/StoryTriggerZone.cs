@@ -1,9 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
-using System.Security.Permissions;
-using TMPro;
-using Unity.VisualScripting;
-using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -75,6 +70,7 @@ public class StoryTriggerZone : MonoBehaviour
 
     private void setDisableEnemiesAI(bool disable)
     {
+        enemies = GameObject.FindGameObjectsWithTag("Enemy");
         foreach(GameObject obj in enemies)
         {
             EnemyAI ai = obj.GetComponent<EnemyAI>();
@@ -96,6 +92,11 @@ public class StoryTriggerZone : MonoBehaviour
 
                 originalSpeeds[count] = ogSpeed;
                 count++;
+            }
+            PlayerAttack atk = obj.GetComponent<PlayerAttack>();
+            if (atk != null)
+            {
+                atk.enabled = !freeze;
             }
         }
     }
