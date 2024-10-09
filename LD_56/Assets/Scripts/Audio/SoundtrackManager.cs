@@ -65,8 +65,6 @@ public class SoundtrackManager : MonoBehaviour
 
     public void UnpauseCurrentSong()
     {
-        
-        
         if (isIntroPlaying())
             introSource.UnPause();
         else
