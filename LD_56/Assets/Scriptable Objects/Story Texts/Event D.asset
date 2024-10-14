@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b543670b42ef1e149a5bd298998d5801, type: 3}
-  m_Name: Event C_D_E
+  m_Name: Event D
   m_EditorClassIdentifier: 
   texts:
   - Oh, Jeepers!
@@ -20,10 +20,3 @@ MonoBehaviour:
   - "She looks like\u2026 Oh no."
   - "Oh no oh no oh no\u2026"
   - "Where did those bug parts come from\u2026?"
-  - . . . !
-  - Oh no! There must be more of them!
-  - I have to get out of here!
-  - "But they\u2019re coming in the front door\u2026 I\u2019ll have to get out the
-    back way!"
-  - "The back door is in the bedroom, to the left of the living room.\u201D"
-  - I have to make a break for it

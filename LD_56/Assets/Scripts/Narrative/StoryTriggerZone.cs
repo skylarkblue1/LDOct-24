@@ -11,6 +11,10 @@ public class StoryTriggerZone : MonoBehaviour
     [SerializeField]
     [Tooltip("How long the text stays up before it disappears")]
     private float lifespan;
+    [SerializeField]
+    private StoryTriggerZone triggerAnotherZone;
+    [SerializeField]
+    private SummonMob summonMobs;
 
     [Tooltip("Can this text pop up again?")]
     public bool Reactivateable;
@@ -43,8 +47,8 @@ public class StoryTriggerZone : MonoBehaviour
     }
 
     private IEnumerator ProcessText() {
-        setDisableEnemiesAI(true);
-        setFreezePlayer(true);
+        SetDisableEnemiesAI(true);
+        SetFreezePlayer(true);
         string currentText = "";
         foreach (string text in storyText.texts)
         {
@@ -58,17 +62,19 @@ public class StoryTriggerZone : MonoBehaviour
 
     private IEnumerator ProcessLifespan(string text) {
         yield return null;
-        setDisableEnemiesAI(false);
-        setFreezePlayer(false);
+        SetDisableEnemiesAI(false);
+        SetFreezePlayer(false);
         narrativeBox.TryDisableTextBox(text);
         if (Reactivateable) {
             isActivated = false;
         } else  {
             gameObject.SetActive(false);
         }
+        if (triggerAnotherZone) triggerAnotherZone.TriggerStory();
+        if (summonMobs) summonMobs.ActivateAllMobs();
     }
 
-    private void setDisableEnemiesAI(bool disable)
+    private void SetDisableEnemiesAI(bool disable)
     {
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
         foreach(GameObject obj in enemies)
@@ -79,7 +85,7 @@ public class StoryTriggerZone : MonoBehaviour
         }
     }
 
-    private void setFreezePlayer(bool freeze)
+    private void SetFreezePlayer(bool freeze)
     {
         int count = 0;
         foreach(GameObject obj in players)

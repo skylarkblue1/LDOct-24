@@ -49,7 +49,7 @@ public class EnemyAI : MonoBehaviour
     private bool isOnCooldown = false;
 
     // If the enemy gets hit, force it to look for the player
-    private bool aggroPlayer = false;
+    public bool aggroPlayer = false;
     private float aggroReset = 5f;
     private float aggroCount = 0;
 
